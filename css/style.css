@@ -1,0 +1,667 @@
+/* 全域設定 START */
+
+body {
+    font-family: 'Microsoft JhengHei', Arial, Helvetica, sans-serif;
+}
+
+/* Navbar START */
+nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+nav div{
+    border:1px solid #E5E5E5;
+    height: 80px;
+    background-color: #edeced;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+nav img{
+    margin:0 3px;
+}
+nav .nav-social{
+    justify-content: center;
+}
+nav .nav-job, nav .nav-login{
+    justify-content: center;
+}
+nav .nav-social a:first-child{
+    margin-right:10px;
+}
+nav .nav-job a:first-child, nav .nav-login a:first-child{
+    margin-right:10px;
+}
+nav .nav-social, nav .nav-login, nav .nav-job,nav .nav-menu{
+    width: 100%;
+    max-width: calc((100% - 1200px) / 2);
+}
+nav .nav-social, nav .nav-job{
+    display: none;
+}
+nav .nav-menu{
+    max-width: 160px;
+}
+nav .nav-login{
+    max-width: 160px;
+    display: none;
+}
+nav a{
+    color:#000000;
+}
+nav .nav-login a{
+    font-size: 14px;
+    font-weight: 400;
+}
+nav .nav-job a{
+    font-size: 14px;
+    font-weight: 400;
+}
+.nav-logo img{
+    height: 36px;
+    width: auto;
+}
+nav .nav-login img, nav .nav-job img{
+    width: 20px;
+    height: auto;
+}
+nav .nav-item{
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    justify-content: start;
+    display: none;
+    order:1;
+}
+.nav-link{
+    font-weight: 700;
+    font-size: 21px;
+    padding:10px 20px;
+}
+nav .nav-logo{
+    width: 100%;
+    max-width: calc(100% - 240px);
+    justify-content: start;
+    padding-left:20px;
+}
+nav .nav-search{
+    width: 80px;
+    background-color: #ffffff;
+}
+nav .nav-menu{
+    justify-content: center;
+}
+.nav-menu{
+    display: none;
+}
+.nav-menu.nav-menu-m{
+    display: flex;
+}
+div>a:after{
+    margin-left:3px;
+}
+.login-member:after{
+    content:"";
+}
+.login-company:after{
+    content:"";
+}
+.job-category:after{
+    content:"";
+}
+.job-map:after{
+    content:"";
+}
+.nav-menu a:after{
+    content:"服務總覽";
+}
+@media (min-width:992px) {
+    .nav-menu{
+        display: flex;
+    }
+    .nav-menu.nav-menu-m{
+        display: none;
+    }
+    nav .nav-item{
+        display: flex;
+        max-width: calc(100% - 160px);
+        height: 80px;
+        order:0;
+    }
+    .nav-item.nav-item-m{
+        display: none;
+    }
+    nav .nav-login{
+        display: flex;
+    }
+}
+@media (min-width:1400px) {
+    nav .nav-social, nav .nav-login, nav .nav-job,nav .nav-menu{
+        max-width: calc((100% - 1200px) / 2);
+    }
+    nav .nav-item{
+        max-width: 1200px;
+        justify-content: center;
+    }
+    nav .nav-logo{
+        max-width: calc(1200px - 80px);
+        justify-content: center;
+        padding-left:0;
+    }
+    nav .nav-social, nav .nav-job{
+        display: flex;
+    }
+    .nav-menu a:after{
+        content:""
+    }
+}
+@media (min-width:1600px) {
+    nav .nav-social, nav .nav-login, nav .nav-job,nav .nav-menu{
+        max-width: calc((100% - 1440px) / 2);
+    }
+    nav .nav-item{
+        max-width: 1440px;
+    }
+    nav .nav-logo{
+        max-width: calc(1440px - 80px);
+    }
+}
+@media (min-width:1700px) {
+    .nav-menu a:after{
+        content:"服務總覽";
+    }
+}
+@media (min-width:1800px) {
+    nav .nav-job, nav .nav-login{
+        justify-content: space-evenly;
+    }
+    nav .nav-job a:first-child, nav .nav-login a:first-child{
+        margin-right:0;
+    }
+    .login-member:after{
+        content:"會員登入";
+    }
+    .login-company:after{
+        content:"企業徵才";
+    }
+    .job-category:after{
+        content:"類別找工作";
+    }
+    .job-map:after{
+        content:"地圖找工作";
+    }
+}
+
+/* Header START */
+@media (min-width: 576px){
+    .container {
+        max-width:100%;
+    }
+}
+@media (min-width: 768px){
+    .container {
+        max-width: calc(100% - 20px);
+    }
+}
+@media (min-width: 992px){
+    .container {
+        max-width: calc(100% - 40px);
+    }
+}
+@media (min-width: 1200px){
+    .container {
+        max-width: calc(100% - 80px);
+    }
+}
+@media (min-width: 1400px){
+    .container {
+        max-width: 1200px;
+    }
+}
+@media (min-width: 1600px){
+    .container {
+        max-width:1440px;
+    }
+}
+header img, section img{
+    width: 100%;
+}/*
+section{
+    border:1px solid red;
+}
+section .row{
+    border:1px solid blue;
+}
+section div[class^="col-"]{
+    border:1px solid green;
+}*/
+header{
+    background-color: #f7f5f7;
+}
+.header-img{
+    width: 100%;
+    aspect-ratio: 16/9;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.header-img{
+    width: 100%;
+    aspect-ratio: 16/9;
+    overflow: hidden;
+    vertical-align: bottom;
+    margin-bottom:90px;
+}
+@media (min-width: 768px){
+    .header-img{
+        margin-bottom:0;
+    }
+}
+.header-text{
+    margin-bottom:0;
+    margin-left:0;
+    position:absolute;
+    bottom: 0;
+    left:0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+}
+header h3{
+    padding:15px 15px;
+    margin-bottom:0;
+    font-weight: 900;
+    font-size:27px;
+    line-height: 1.125;
+    background-color: #ffffff;
+    color:#000000;
+    display:inline-block;
+    width: 100%;
+    order: 1;
+}
+@media (min-width: 768px){
+    .header-text{
+        width: calc(100% - 30px);
+        margin-bottom: 15px;
+        margin-left:15px;
+    }
+    header h3{
+        padding:25px 15px;
+        font-size: 36px;
+    }
+}
+@media (min-width: 992px){
+    .header-text{
+        width: calc((100% / 3 * 2 ) - 60px);
+        margin-bottom: 30px;
+        margin-left:30px;
+    }
+    header h3{
+        padding:30px 20px;
+        font-size: 45px;
+    }
+}
+@media (min-width: 1600px){
+    .header-text{
+        width: calc((100% / 3 * 2 ) - 60px);
+    }
+    header h3{
+        padding:40px 30px;
+        font-size: 56px;
+    }
+}
+header span{
+    background-color: #E60012;
+    color:#ffffff;
+    padding:5px 10px;
+    font-size: 16px;
+    display: inline-block;
+    width: auto;
+    order:-1;
+}
+
+/* Section START */
+section .card-row div[class^="col-"]{
+    margin-bottom:15px;
+}
+section .card-company{
+    display: flex;
+    flex-wrap: wrap;
+}
+.card-company .company-img{
+    aspect-ratio: 1/1;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border:1px solid #dadada;
+    border-bottom:none;
+}
+section.section-gray{
+    background-color: #f7f5f7;
+}
+section.section-white{
+    background-color: #ffffff;
+    overflow: hidden;
+    padding-left:0;
+    padding-right:0;
+}
+section.section-white>.container{
+    background-color: #ffffff;
+}
+section.section-white>.container>.row.swiper-row{
+    width: calc(150% + 60px);
+}
+.card-company .company-logo{
+    border:3px solid #dadada;
+    width:80px;
+    height: 80px;
+    padding:5px;
+    margin-top:-80px;
+    background-color: #ffffff;
+}
+.card-company .company-name{
+    background-color: #edeced;
+    border-right:1px solid #dadada;
+    width: calc(100% - 80px);
+    height: 50px;
+    padding:5px 15px;
+    margin-top:-50px;
+    display: flex;
+    align-items: center;
+}
+.company-name h4{
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 1;
+    color:#161616;
+    margin-bottom:0;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+.card-company .company-category{
+    background-color: #E60012;
+    color:#ffffff;
+    width:30%;
+    height: 30px;
+    padding:5px 15px;
+    margin-top:-80px;
+    margin-left:80px;
+    font-size: 12px;
+    text-align: center;
+}
+.company-category span{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp:1;
+    overflow: hidden;
+}
+.card-company .company-slogan{
+    background-color: #ffffff;
+    border:1px solid #dadada;
+    border-top:none;
+    color:#161616;
+    padding:10px 15px;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+.company-slogan p{
+    margin-bottom:0;
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 1;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+.card-row>div[class^="col-"]>.card-company{
+    opacity: 0;
+}
+.card-row.animate>div[class^="col-"]>.card-company{
+    opacity: 0;
+}
+.card-row.animate>div[class^="col-"]:nth-child(1)>.card-company{
+    opacity: 0;
+    animation:down-up 1s .4s 1 ease-out forwards;
+}
+.card-row.animate>div[class^="col-"]:nth-child(2)>.card-company{
+    opacity: 0;
+    animation:down-up 1s .6s 1 ease-out forwards;
+}
+.card-row.animate>div[class^="col-"]:nth-child(3)>.card-company{
+    opacity: 0;
+    animation:down-up 1s .8s 1 ease-out forwards;
+}
+.card-row.animate>div[class^="col-"]:nth-child(4)>.card-company{
+    opacity:0;
+    animation:down-up 1s 1s 1 ease-out forwards;
+}
+.card-row.animate>div[class^="col-"]:nth-child(5)>.card-company{
+    opacity: 0;
+    animation:down-up 1s 1.2s 1 ease-out forwards;
+}
+.card-row.animate>div[class^="col-"]:nth-child(6)>.card-company{
+    opacity: 0;
+    animation:down-up 1s 1.4s 1 ease-out forwards;
+}
+.card-row.animate>div[class^="col-"]:nth-child(7)>.card-company{
+    opacity: 0;
+    animation:down-up 1s 1.6s 1 ease-out forwards;
+}
+.card-row.animate>div[class^="col-"]:nth-child(8)>.card-company{
+    opacity:0;
+    animation:down-up 1s 1.8s 1 ease-out forwards;
+}
+.card-row.animate>div[class^="col-"]:nth-child(9)>.card-company{
+    opacity:0;
+    animation:down-up 1s 2s 1 ease-out forwards;
+}
+.card-row.animate>div[class^="col-"]:nth-child(10)>.card-company{
+    opacity:0;
+    animation:down-up 1s 2.2s 1 ease-out forwards;
+}
+.card-row.animate>div[class^="col-"]:nth-child(11)>.card-company{
+    opacity:0;
+    animation:down-up 1s 2.4s 1 ease-out forwards;
+}
+.card-row.animate>div[class^="col-"]:nth-child(12)>.card-company{
+    opacity:0;
+    animation:down-up 1s 2.6s 1 ease-out forwards;
+}
+@keyframes down-up {
+    0% {
+        margin-top:50%;
+        margin-bottom:-50%;
+        opacity: 0;
+    }
+    100% {
+        margin-top:0;
+        margin-bottom:0;
+        opacity: 1;
+    }
+}
+.swiper>.swiper-wrapper .card-company{
+    opacity: 0;
+}
+.swiper.animate>.swiper-wrapper>.swiper-slide:nth-child(1) .card-company{
+    opacity: 0;
+    animation:down-up 1s .4s 1 ease-out forwards;
+}
+.swiper.animate>.swiper-wrapper>.swiper-slide:nth-child(2) .card-company{
+    opacity: 0;
+    animation:down-up 1s .6s 1 ease-out forwards;
+}
+.swiper.animate>.swiper-wrapper>.swiper-slide:nth-child(3) .card-company{
+    opacity: 0;
+    animation:down-up 1s .8s 1 ease-out forwards;
+}
+.swiper.animate>.swiper-wrapper>.swiper-slide:nth-child(4) .card-company{
+    opacity: 0;
+    animation:down-up 1s 1s 1 ease-out forwards;
+}
+.swiper.animate>.swiper-wrapper>.swiper-slide:nth-child(5) .card-company{
+    opacity: 0;
+    animation:down-up 1s 1.2s 1 ease-out forwards;
+}
+.swiper.animate>.swiper-wrapper>.swiper-slide:nth-child(6) .card-company{
+    opacity: 0;
+    animation:down-up 1s 1.4s 1 ease-out forwards;
+}
+.swiper.animate>.swiper-wrapper>.swiper-slide:nth-child(7) .card-company{
+    opacity: 0;
+    animation:down-up 1s 1.6s 1 ease-out forwards;
+}
+.section-top>div[class^="col-"]{
+    display: flex;
+    align-items: flex-end;
+}
+.section-title{
+    font-weight: 700;
+    font-size: 45px;
+    margin-bottom:16px;
+}
+.section-top>div[class^="col-"]:last-child{
+    justify-content: flex-end;
+}
+.section-link{
+    font-weight: 700;
+    font-size: 16px;
+    margin-bottom:16px;
+    text-align: left;
+    margin-right:0;
+    color:#000000;
+}
+.section-link i{
+    border:1px solid #dadada;
+    background-color: #E5E5E5;
+    color:#000000;
+    width: 27px;
+    height: 27px;
+    padding:5px;
+    margin-left:10px;
+}
+.section-video iframe{
+    aspect-ratio: 16/9;
+    opacity: 0;
+}
+.section-video .card-company{
+    opacity: 0;
+}
+.section-video.animate div[class^="col-"] iframe{
+    opacity: 0;
+    animation:down-up 1s .4s 1 ease-out forwards;
+}
+.section-video.animate div[class^="col-"]:nth-child(2) .card-company{
+    opacity: 0;
+    animation:down-up 1s .8s 1 ease-out forwards;
+}
+.section-video.animate div[class^="col-"]:nth-child(3) .card-company{
+    opacity: 0;
+    animation:down-up 1s 1s 1 ease-out forwards;
+}
+.section-video.animate div[class^="col-"]:nth-child(4) .card-company{
+    opacity: 0;
+    animation:down-up 1s 1.2s 1 ease-out forwards;
+}
+.section-video .company-img{
+    aspect-ratio: 16/9;
+}
+.section-video .company-slogan{
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+.section-video .company-slogan p{
+    margin-bottom:0;
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 1;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+}
+.tool .company-img{
+    border:none;
+    margin-bottom:15px;
+    width: 100%;
+}
+.tool .tool-title{
+    width: 100%;
+}
+.tool .tool-text{
+    width: 100%;
+}
+.tool .tool-title h4{
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+    width: 100%;
+}
+.tool .tool-text p{
+    font-size: 12px;
+    font-weight: 400;
+    text-align: left;
+    width: 100%;
+}
+@media (min-width:768px) {
+    .tool .tool-title h4{
+        font-size: 16px;
+    }
+    .tool .tool-text p{
+        font-size: 14px;
+    }
+}
+@media (min-width:992px) {
+    .tool .tool-title h4{
+        font-size: 21px;
+    }
+    .tool .tool-text p{
+        font-size: 18px;
+    }
+}
+.tool .card-company{
+    opacity: 0;
+}
+.tool.animate div[class^="col-"]:nth-child(1) .card-company{
+    opacity: 0;
+    animation:down-up 1s .4s 1 ease-out forwards;
+}
+.tool.animate div[class^="col-"]:nth-child(2) .card-company{
+    opacity: 0;
+    animation:down-up 1s .6s 1 ease-out forwards;
+}
+.tool.animate div[class^="col-"]:nth-child(3) .card-company{
+    opacity: 0;
+    animation:down-up 1s .8s 1 ease-out forwards;
+}
+.tool.animate div[class^="col-"]:nth-child(4) .card-company{
+    opacity: 0;
+    animation:down-up 1s 1s 1 ease-out forwards;
+}
+.tool.animate div[class^="col-"]:nth-child(5) .card-company{
+    opacity: 0;
+    animation:down-up 1s 1.2s 1 ease-out forwards;
+}
+.tool.animate div[class^="col-"]:nth-child(6) .card-company{
+    opacity: 0;
+    animation:down-up 1s 1.4s 1 ease-out forwards;
+}
+
+/* Footer START */
+footer{
+    padding-top:30px;
+    padding-bottom:30px;
+    font-size: 14px;
+    font-weight: 400;
+}

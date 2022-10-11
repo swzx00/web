@@ -1,0 +1,1 @@
+$(function(){$("#BackTop").click(function(){$("html,body").animate({scrollTop:0},333)}),$(window).scroll(function(){$(this).scrollTop()>300?$("#BackTop").fadeIn(222):$("#BackTop").stop().fadeOut(222)}).scroll()});

@@ -1,0 +1,1 @@
+$(document).ready(function(){var o;$(".video-btn").click(function(){o=$(this).data("src")}),$("#myModal").on("shown.bs.modal",function(n){$("#video").attr("src",o+"?autoplay=1&amp;modestbranding=1&amp;showinfo=0")}),$("#myModal").on("hide.bs.modal",function(n){$("#video").attr("src",o)})});
